@@ -1,0 +1,30 @@
+server:
+  port: 7777
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://81.71.138.54:3306/sg_blog?serverTimezone=GMT%2B8&useSSL=true
+    username: root
+    password: root
+  servlet:
+    multipart:
+      max-file-size: 2MB
+      max-request-size: 5MB
+  redis:
+    host: 81.71.138.54
+    port: 6379
+
+mybatis-plus:
+#  configuration:
+#    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  global-config:
+    db-config:
+      logic-delete-field: delFlag
+      logic-delete-value: 1
+      logic-not-delete-value: 0
+      id-type: auto
+
+oss:
+  accessKey: LH_z5vaM8dK3gsDJ3HyPBhc0YQWXhPNvszCBieis
+  secretKey: h6Q8YGZ19Y6xPlA-2lU0MESGNE59Zo2qjc_Hr8xp
+  bucket: home-works
